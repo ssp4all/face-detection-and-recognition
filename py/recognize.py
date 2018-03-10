@@ -8,15 +8,15 @@ def faceRecognize():
     faceCascade = cv2.CascadeClassifier(faceCascPath)
     eyeCascade = cv2.CascadeClassifier(eyeCascadePath)
 
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(0)#capture image here 0 is default webcam
     recog = cv2.face.LBPHFaceRecognizer_create()
     recog.read('recognized/training.yml')
 
     id = 0
     while True:
-        a, img = cam.read()
+        a, img = cam.read()#will return true or false and image frame
         img = cv2.flip(img,1)
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)#convert image to gray scale image
         faces = faceCascade.detectMultiScale(gray, 1.1, 5, flags = cv2.CASCADE_SCALE_IMAGE)
         for (x, y, w, h) in faces:
             face = gray[y:y+h, x:x+w]
