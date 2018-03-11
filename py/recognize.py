@@ -34,7 +34,7 @@ def faceRecognize():
                     occupation = "Unknown"
                     gender = "Unknown"
 
-                cv2.rectangle(img,(x, y),(x+w,y+h),2)
+                cv2.rectangle(img, (x, y), (x+w, y+h), (255, 165, 0), 5)
                 id, confidence = recog.predict(gray[y:y+h,x:x+w])
 
                 if confidence < 50:
@@ -47,9 +47,9 @@ def faceRecognize():
                     occupation = "Unknown"
                     gender = "Unknown"
 
-                cv2.putText(img, "Name- " + name, (x, y + h), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 2)
-                cv2.putText(img, "Occupation- " + occupation, (x, y + h + 10), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 2)
-                cv2.putText(img, "Gender- " + gender, (x, y + h + 20), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 2)
+                cv2.putText(img, "Name- " + name, (x, y + h), cv2.FONT_HERSHEY_PLAIN, 1, (255,69,0), 2)
+                cv2.putText(img, "Occupation- " + occupation, (x, y + h + 10), cv2.FONT_HERSHEY_PLAIN, 1, (255,69,0), 2)
+                cv2.putText(img, "Gender- " + gender, (x, y + h + 20), cv2.FONT_HERSHEY_PLAIN, 1, (255,69,0), 2)
                 print ("id = " + str(faceId) + " , confidence = " + str(confidence))
         cv2.imshow("Face Recognition Running", img)
         if cv2.waitKey(1) == ord('q'):

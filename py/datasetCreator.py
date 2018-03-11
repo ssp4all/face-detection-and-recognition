@@ -99,7 +99,7 @@ def createDataset():
             eyes = eyeCascade.detectMultiScale(face, 1.1, 5, flags = cv2.CASCADE_SCALE_IMAGE)
             if len(eyes) == 2:
                 cv2.imwrite("dataset/user." + str(id) + "." + str(i) + ".jpg", gray[y:y + h, x:x + w])
-                cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 165, 0), 5)
                 i = i + 1
             cv2.waitKey(1)
         cv2.imshow("Webcam Face Detection", cv2.flip(img,1))
