@@ -107,7 +107,7 @@ def faceRecognize():
                 cv2.rectangle(img, (x, y), (x+w, y+h), (255, 165, 0), 5)
                 id, confidence = recog.predict(gray[y:y+h, x:x+w])
 
-                if confidence < 50:
+                if confidence < 60:
                     profile = getProfileDataById(str(id))
                     name = profile[1]
                     occupation = profile[2]
@@ -120,7 +120,7 @@ def faceRecognize():
                 print("wait")
                 if i == 5:
                     print("...")
-                    if confidence > 100:
+                    if confidence > 80:
                         send_mail()
                         send_msg()
                         break
