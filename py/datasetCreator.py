@@ -3,7 +3,7 @@ import cv2
 import os
 import sqlite3
 import glob
-from .database import getProfileDataById
+from py.database import getProfileDataById
 
 os.system("clear")
 print ("\t\tAdd a new face or Update an old face")
