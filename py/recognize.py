@@ -21,7 +21,7 @@ def send_msg():
     print("sms sent")
 def send_mail():
     sender = 'motionsensor4all@gmail.com'
-    gmail_password = 'motionsensor4all@gmail'
+    gmail_password = 'XXXXX'
     recipients = ['2015suraj.pawar@ves.ac.in']
 
     # Create the enclosing (outer) message
