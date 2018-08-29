@@ -15,7 +15,7 @@ COMMASPACE = ', '
 import sys
 import os
 def send_msg():
-    q = way2sms.sms(9892420886, 'motionsensor')
+    q = way2sms.sms(9*92420886, 'XXX')
     q.send('9892420886', 'Intruder Alert')
     q.logout()
     print("sms sent")
