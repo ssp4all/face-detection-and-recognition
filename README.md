@@ -1,5 +1,6 @@
 
-## Smart-Rakshak
+## Smart-Rakshak    [![HitCount](http://hits.dwyl.io/ssp4all/Smart-Rakshak.svg)](http://hits.dwyl.io/ssp4all/Smart-Rakshak)
+
 
   + Developed an Economic and Effective Security solution for homes.
   + Build with the help of latest technologies like IoT and Machine learning for Face recognition.
